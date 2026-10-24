@@ -4,3 +4,5 @@ SpeechRecognition
 edge-tts
 PyAudio
 pygame
+requests
+spotipy

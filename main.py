@@ -9,6 +9,8 @@ from google import genai
 from google.genai import types
 import edge_tts
 
+from spotify_helper import build_spotify_tool
+
 load_dotenv()
 
 # Initialize Gemini Client
@@ -36,7 +38,10 @@ chat = client.chats.create(
             "When the search tool is available, use it as the primary source for up-to-date facts. "
             "Keep answers short, friendly, and under 3 sentences."
         ),
-        tools=[types.Tool(google_search=types.GoogleSearch())],
+        tools=[
+            types.Tool(google_search=types.GoogleSearch()),
+            build_spotify_tool(),
+        ],
     ),
 )
 

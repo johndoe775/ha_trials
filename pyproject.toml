@@ -10,5 +10,7 @@ dependencies = [
     "pyaudio>=0.2.14",
     "pygame>=2.6.1",
     "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
     "speechrecognition>=3.17.0",
+    "spotipy>=2.26.0",
 ]
